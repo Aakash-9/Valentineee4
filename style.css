@@ -483,3 +483,21 @@ video{
   max-width:700px;
   border-radius:20px;
 }
+.hidden{ display:none; }
+
+.photo-bg{
+  background:url("heart.png") center/cover no-repeat;
+}
+
+.dark{
+  background:rgba(0,0,0,0.5);
+  color:white;
+}
+
+video{
+  width:85%;
+  max-width:700px;
+  border-radius:20px;
+}
+
+
