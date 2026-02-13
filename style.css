@@ -1,0 +1,86 @@
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#ffb3d1,#a8d5e2);
+  overflow:hidden;
+  color:#fff;
+}
+
+.page{
+  position:absolute;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  opacity:0;
+  transform:scale(.96);
+  transition:.6s ease;
+}
+
+.page.active{
+  opacity:1;
+  transform:scale(1);
+}
+
+.card{
+  background:rgba(255,255,255,0.95);
+  padding:40px;
+  border-radius:20px;
+  color:#ff4d7a;
+  box-shadow:0 20px 60px rgba(255,107,157,.3);
+}
+
+.title{font-size:2.2rem;margin-bottom:20px;}
+.subtitle{margin-bottom:30px;}
+
+button{
+  padding:14px 28px;
+  border:none;
+  border-radius:10px;
+  margin:10px;
+  font-size:18px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.yes{background:#ff4d7a;color:#fff;}
+.no{background:#444;color:#fff;}
+.primary{background:#ff4d7a;color:#fff;}
+
+button:hover{transform:scale(1.1);}
+
+.photo{
+  background:url("heart.png") center/cover no-repeat;
+}
+
+.glass{
+  background:rgba(0,0,0,.4);
+  padding:40px;
+  border-radius:15px;
+  backdrop-filter:blur(8px);
+}
+
+video{
+  width:85%;
+  max-width:700px;
+  border-radius:12px;
+}
+
+/* Floating Hearts */
+.hearts-container{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+}
+
+.heart{
+  position:absolute;
+  font-size:22px;
+  animation:float 10s linear infinite;
+}
+
+@keyframes float{
+  from{transform:translateY(100vh);}
+  to{transform:translateY(-100px);}
+}

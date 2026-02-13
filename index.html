@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Gayatri ❤️</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<div class="hearts-container"></div>
+
+<!-- PAGE 1 -->
+<section id="page1" class="page active">
+  <div class="card">
+    <h1 class="title">Gayatri, Will You Be My Valentine? 💖</h1>
+
+    <div class="buttons">
+      <button id="yesBtn" class="yes">YES 💘</button>
+      <button id="noBtn" class="no">NO 💔</button>
+    </div>
+
+    <p id="msg"></p>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section id="page2" class="page">
+  <h1 class="title glow">You make my world brighter, Gayatri 💖</h1>
+  <p class="subtitle">Happy Valentine’s Day ❤️</p>
+  <button class="primary" onclick="goPhoto()">Click here for Surprise ✨</button>
+</section>
+
+<!-- PAGE 3 -->
+<section id="page3" class="page photo">
+  <div class="glass">
+    <h1 class="title">Are you ready? 💫</h1>
+    <button class="primary" onclick="playVideo()">Yes, I'm ready ❤️</button>
+  </div>
+</section>
+
+<!-- PAGE 4 (VIDEO) -->
+<section id="page4" class="page">
+  <video id="video" controls preload="auto">
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
