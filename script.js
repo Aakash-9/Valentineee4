@@ -16,10 +16,20 @@ const msg=document.getElementById("msg");
 const video=document.getElementById("video");
 const music=document.getElementById("music");
 
+/* IMPORTANT — Disable video autoplay completely */
+video.pause();
+video.currentTime=0;
+video.removeAttribute("autoplay");
+
 /* Page switch */
 function show(id){
- document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
- document.getElementById(id).classList.add("active");
+ document.querySelectorAll(".page").forEach(p=>{
+   p.classList.remove("active");
+   p.style.pointerEvents="none";
+ });
+ const page=document.getElementById(id);
+ page.classList.add("active");
+ page.style.pointerEvents="auto";
 }
 
 /* NO click */
@@ -40,16 +50,23 @@ function goPhoto(){
  show("page3");
 }
 
-/* Video page */
+/* VIDEO PAGE — ONLY PLAY HERE */
 function playVideo(){
  show("page4");
 
- if(music) music.pause();
+ // stop music
+ if(music){
+   music.pause();
+   music.currentTime=0;
+ }
 
+ // STRICT CONTROL
  video.pause();
  video.currentTime=0;
 
- setTimeout(()=>video.play(),300);
+ setTimeout(()=>{
+   video.play().catch(()=>{});
+ },200);
 }
 
 /* Floating hearts */
@@ -61,4 +78,4 @@ setInterval(()=>{
  h.style.left=Math.random()*100+"%";
  container.appendChild(h);
  setTimeout(()=>h.remove(),10000);
-},800);
+},900);
