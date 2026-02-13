@@ -10,27 +10,40 @@
 
 <body>
 
-<!-- Floating Hearts -->
 <div class="hearts-container"></div>
 
-<!-- MAIN PAGE -->
+<!-- PAGE 1 -->
 <div class="container" id="page1">
   <div class="card">
     <h1 class="title">Gayatri, Will You Be My Valentine? 💖</h1>
+
+    <div class="buttons-container">
+      <button id="yesBtn" class="btn btn-yes">YES 💘</button>
+      <button id="noBtn" class="btn btn-no">NO 💔</button>
+    </div>
+
+    <p id="msg"></p>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="container hidden" id="page2">
+  <div class="card">
+    <h1 class="title">You made my heart smile 💖</h1>
     <button class="btn btn-yes" onclick="showReady()">Click here for Surprise ✨</button>
   </div>
 </div>
 
-<!-- READY PAGE -->
-<div class="container hidden photo-bg" id="page2">
+<!-- PAGE 3 -->
+<div class="container hidden photo-bg" id="page3">
   <div class="card dark">
     <h1 class="title">Are you ready? 💫</h1>
     <button class="btn btn-yes" onclick="playVideo()">Yes ❤️</button>
   </div>
 </div>
 
-<!-- VIDEO PAGE -->
-<div class="container hidden" id="page3">
+<!-- PAGE 4 -->
+<div class="container hidden" id="page4">
   <video id="video" controls>
     <source src="video.mp4" type="video/mp4">
   </video>
